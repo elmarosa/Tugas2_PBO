@@ -4,7 +4,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Database {
+public class dbs {
     public static void createNewDatabase(String fileName){
         String url = "jdbc:sqlite:C:/sqlite/" + fileName;
         try {

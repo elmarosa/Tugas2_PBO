@@ -1,18 +1,14 @@
 package org.example;
-import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import org.json.JSONObject;
 import java.util.concurrent.Executors;
-import java.io.InputStream;
 
-public class Server {
+public class server {
 
-    public Server() {
-        Con con = new Con();
+    public server() {
+        conn con = new conn();
     }
 
     public void startServer() throws IOException {

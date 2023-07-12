@@ -2,10 +2,10 @@ package org.example;
 import java.sql.DriverManager;
 import java.sql.*;
 
-public class Con {
+public class conn {
     private Connection connection;
 
-    public Con() {
+    public conn() {
         try {
             this.connection = null;
             Class.forName("org.sqlite.JDBC");
