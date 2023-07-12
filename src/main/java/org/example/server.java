@@ -2,6 +2,7 @@ package org.example;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 
@@ -18,6 +19,19 @@ public class server {
         httpServer.start();
     }
 
-    private class EcomHandler implements HttpHandler {
+    public static class EcomHandler implements HttpHandler {
+        public void handle(HttpExchange exchange) throws IOException {
+            //post
+            //get
+
+            if("GET".equals(exchange.getRequestMethod())){
+                OutputStream outputStream = exchange.getResponBody();
+                String tes = "Elmarosa";
+                exchange.sendResponseHeaders(200, tes.length());
+                outputStream.write(tes.getBytes());
+                outputStream.flush();
+                outputStream.close();
+            }
+        }
     }
 }
